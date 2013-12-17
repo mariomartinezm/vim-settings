@@ -50,8 +50,11 @@ syntax on                   " Highlight syntax
 set colorcolumn=80          " show a margin at column 80
 
 if has("gui_running")
-  set gfn=Consolas:h9:cANSI
-  colorscheme kolor
+    if has("win32") || has("win16")
+        set gfn=Consolas:h9:cANSI
+    endif
+
+    colorscheme kolor
 else
   colorscheme default
 endif
