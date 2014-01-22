@@ -15,7 +15,7 @@ map <Leader>r :w<CR>:make main.tex<CR>
 if has("win32") || has("win16")
     map <Leader>s :!start "C:\Program Files (x86)\SumatraPDF\SumatraPDF.exe" main.pdf<CR>
 else
-    map <Leader>s :!okular main.pdf<CR>
+    map <Leader>s :AsyncCommand okular main.pdf<CR>
 endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
