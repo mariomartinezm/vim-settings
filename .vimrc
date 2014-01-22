@@ -33,6 +33,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'klen/python-mode'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'pydave/AsyncCommand'
 NeoBundle 'zeis/vim-kolor'
 
 NeoBundleCheck              " Installation check
