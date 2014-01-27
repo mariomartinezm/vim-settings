@@ -36,6 +36,8 @@ NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'pydave/AsyncCommand'
 NeoBundle 'zeis/vim-kolor'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tomasr/molokai'
 
 NeoBundleCheck              " Installation check
 
@@ -56,7 +58,7 @@ if has("gui_running")
         set gfn=Consolas:h9:cANSI
     endif
 
-    colorscheme kolor
+    colorscheme molokai
 else
   colorscheme default
 endif
