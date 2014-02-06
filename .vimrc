@@ -110,6 +110,8 @@ let g:pymode_rope = 0       " Disable all rope functionality
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Jedi-vim settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#completions_enabled = 0
 let g:jedi#popup_select_first = 0
 let g:jedi#rename_command = "<leader>R"
 
