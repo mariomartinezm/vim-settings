@@ -52,6 +52,7 @@ set ruler                   " show cursor position in status bar
 set title                   " show file title in title bar
 syntax on                   " Highlight syntax
 set colorcolumn=80          " show a margin at column 80
+set hlsearch                " highlight search results
 
 if has("gui_running")
     if has("win32") || has("win16")
