@@ -38,6 +38,7 @@ NeoBundle 'pydave/AsyncCommand'
 NeoBundle 'zeis/vim-kolor'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'reedes/vim-colors-pencil'
 
 NeoBundleCheck              " Installation check
 
@@ -59,7 +60,7 @@ if has("gui_running")
         set gfn=Consolas:h9:cANSI
     endif
 
-    colorscheme molokai
+    colorscheme pencil
 else
   colorscheme default
 endif
