@@ -12,9 +12,9 @@ if has('vim_starting')
 endif
 
 if has("win32") || has("win16")
-    call neobundle#rc(expand('C:/Vim/vimfiles/bundle/'))
+    call neobundle#begin(expand('C:/Vim/vimfiles/bundle/'))
 else
-    call neobundle#rc(expand('~/.vim/bundle/'))
+    call neobundle#begin(expand('~/.vim/bundle/'))
 endif
 
 " Let neobundle manage NeoBundle
@@ -39,6 +39,8 @@ NeoBundle 'zeis/vim-kolor'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'reedes/vim-colors-pencil'
+
+call neobundle#end()
 
 NeoBundleCheck              " Installation check
 
