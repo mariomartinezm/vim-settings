@@ -70,6 +70,7 @@ endif
 " => Editor settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set encoding=utf-8          " set utf-8 as default encoding
+set noundofile              " do not create undo files
 set nowrap                  " don't wrap lines
 set ignorecase              " first enable ignore case for searching
 set smartcase               " then enable smart case (case-sensitive if you use
