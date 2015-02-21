@@ -87,6 +87,7 @@ filetype plugin indent on   " enable plugins
 " => Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 imap jj <Esc>
+let mapleader = "\<Space>"
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
