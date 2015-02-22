@@ -26,6 +26,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'Shougo/unite.vim'
 NeoBundle 'yegappan/mru'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
@@ -39,6 +40,7 @@ NeoBundle 'zeis/vim-kolor'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'reedes/vim-colors-pencil'
+NeoBundle 'whatyouhide/vim-gotham'
 
 call neobundle#end()
 
@@ -62,7 +64,7 @@ if has("gui_running")
         set gfn=Consolas:h9:cANSI
     endif
 
-    colorscheme pencil
+    colorscheme gotham 
 else
   colorscheme default
 endif
@@ -80,14 +82,12 @@ set smarttab                " smart tab handling for indenting
 set expandtab               " convert tab to spaces
 set tabstop=4               " number of spaces a tab counts for
 set shiftwidth=4            " spaces for autoindent
-set autochdir               " set working directory to current file
 filetype plugin indent on   " enable plugins
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 imap jj <Esc>
-let mapleader = "\<Space>"
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
@@ -112,6 +112,20 @@ xmap <C-k>      <Plug>(neosnippet_expand_or_jump)
 " => Python-mode settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:pymode_rope = 0       " Disable all rope functionality
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Unite settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <leader>uf :<C-u>Unite file<CR>
+nnoremap <leader>ub :<C-u>Unite buffer<CR>
+
+" Custom mappings for the unite buffer
+function! s:unite_settings()
+    nmap <buffer> <Esc> <Plug>(unite_exit)
+endfunction
+
+autocmd FileType unite call s:unite_settings()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Jedi-vim settings
