@@ -64,9 +64,9 @@ if has("gui_running")
         set gfn=Consolas:h9:cANSI
     endif
 
-    colorscheme gotham 
+    colorscheme gotham
 else
-  colorscheme default
+    colorscheme default
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor settings
@@ -83,6 +83,9 @@ set expandtab               " convert tab to spaces
 set tabstop=4               " number of spaces a tab counts for
 set shiftwidth=4            " spaces for autoindent
 filetype plugin indent on   " enable plugins
+
+set splitbelow              " Open horizontal splits below
+set splitright              " Open vertical splits to the right
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
@@ -119,6 +122,7 @@ let g:pymode_rope = 0       " Disable all rope functionality
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 nnoremap <leader>uf :<C-u>Unite file<CR>
 nnoremap <leader>ub :<C-u>Unite buffer<CR>
+nnoremap <leader>ur :<C-u>Unite file_rec<CR>
 
 " Custom mappings for the unite buffer
 function! s:unite_settings()
@@ -130,16 +134,18 @@ autocmd FileType unite call s:unite_settings()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Jedi-vim settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:jedi#auto_vim_configuration = 0
+autocmd FileType python setlocal omnifunc=jedi#completions
 let g:jedi#completions_enabled = 0
-let g:jedi#popup_select_first = 0
+let g:jedi#auto_vim_configuration = 0
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.python =
+\ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
+"let g:jedi#popup_select_first = 0
 let g:jedi#rename_command = "<leader>R"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-airline settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Settings for vsvim
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set backspace=indent,eol,start
