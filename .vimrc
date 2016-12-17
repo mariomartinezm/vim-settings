@@ -27,12 +27,11 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'yegappan/mru'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'klen/python-mode'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'pydave/AsyncCommand'
@@ -111,11 +110,6 @@ let g:neocomplete#enable_smart_case = 1
 imap <C-k>      <Plug>(neosnippet_expand_or_jump)
 smap <C-k>      <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>      <Plug>(neosnippet_expand_or_jump)
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Python-mode settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:pymode_rope = 0       " Disable all rope functionality
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Unite settings
