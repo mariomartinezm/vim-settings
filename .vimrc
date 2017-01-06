@@ -119,6 +119,7 @@ xmap <C-k>      <Plug>(neosnippet_expand_or_jump)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 nnoremap <leader>uf :<C-u>Unite file<CR>
+nnoremap <leader>un :<C-u>Unite file file/new<CR>
 nnoremap <leader>ub :<C-u>Unite buffer<CR>
 nnoremap <leader>ur :<C-u>Unite file_rec<CR>
 
