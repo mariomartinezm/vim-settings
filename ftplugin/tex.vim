@@ -13,7 +13,7 @@ set makeprg=pdflatex\ main.tex
 map <Leader>b :w<CR>:!bibtex main<CR>
 
 if has("win32") || has("win16")
-    map <Leader>s :!start "C:\Program Files (x86)\SumatraPDF\SumatraPDF.exe" main.pdf<CR>
+    map <Leader>s :!start "C:\Program Files\SumatraPDF\SumatraPDF.exe" main.pdf<CR>
 else
 endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
