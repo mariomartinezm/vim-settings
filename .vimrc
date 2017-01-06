@@ -27,20 +27,20 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'yegappan/mru'
-NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'vim-syntastic/syntastic'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'klen/python-mode'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'pydave/AsyncCommand'
+NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'zeis/vim-kolor'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'reedes/vim-colors-pencil'
 NeoBundle 'whatyouhide/vim-gotham'
+NeoBundle 'liuchengxu/space-vim-dark'
+NeoBundle 'Marfisc/vorange'
 
 call neobundle#end()
 
@@ -64,9 +64,9 @@ if has("gui_running")
         set gfn=Consolas:h9:cANSI
     endif
 
-    colorscheme gotham
+    colorscheme space-vim-dark
 else
-    colorscheme default
+    colorscheme vorange
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor settings
@@ -96,7 +96,8 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
-map <Leader>n :NERDTreeToggle<CR>
+map <Leader>y "+y
+map <Leader>p "+p
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Neocomplete settings
@@ -111,11 +112,6 @@ let g:neocomplete#enable_smart_case = 1
 imap <C-k>      <Plug>(neosnippet_expand_or_jump)
 smap <C-k>      <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>      <Plug>(neosnippet_expand_or_jump)
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Python-mode settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:pymode_rope = 0       " Disable all rope functionality
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Unite settings
