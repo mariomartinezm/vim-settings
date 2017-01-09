@@ -99,6 +99,7 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 map <Leader>y "+y
 map <Leader>p "+p
+nnoremap <Leader>cw :cd %:p:h<CR>:pwd<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Neocomplete settings
