@@ -29,6 +29,7 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'vimwiki/vimwiki'
 NeoBundle 'skywind3000/asyncrun.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tpope/vim-surround'
@@ -150,3 +151,16 @@ let g:jedi#rename_command = "<leader>R"
 " => Vim-airline settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vimwiki settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has("win32") || has("win16")
+    let g:vimwiki_list = [
+                \{'path': 'D:/Dropbox/TODO/personal.wiki'}
+                \]
+else
+    let g:vimwiki_list = [
+                \{'path': '~/Dropbox/TODO/personal.wiki'}
+                \]
+endif
