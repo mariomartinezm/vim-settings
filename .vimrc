@@ -5,50 +5,46 @@ if has('vim_starting')
         source $VIMRUNTIME/vimrc_example.vim
         source $VIMRUNTIME/mswin.vim
         behave mswin
-        set runtimepath+=$VIM/vimfiles/bundle/neobundle.vim/
-    else
-        set runtimepath+=~/.vim/bundle/neobundle.vim/
     endif
 endif
 
+" Specify a directory for plugins
 if has("win32") || has("win16")
-    call neobundle#begin(expand('C:/Vim/vimfiles/bundle/'))
+    call plug#begin('~/vimfiles/plugged')
 else
-    call neobundle#begin(expand('~/.vim/bundle/'))
+    call plug#begin('~/.vim/plugged')
 endif
-
-" Let neobundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Github repos
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'beyondmarc/glsl.vim'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'junegunn/vim-easy-align'
-NeoBundle 'liuchengxu/space-vim-dark'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'Marfisc/vorange'
-NeoBundle 'reedes/vim-colors-pencil'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'skywind3000/asyncrun.vim'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'vimwiki/vimwiki'
-NeoBundle 'vim-scripts/taglist.vim'
-NeoBundle 'whatyouhide/vim-gotham'
-NeoBundle 'zeis/vim-kolor'
+Plug 'altercation/vim-colors-solarized'
+Plug 'beyondmarc/glsl.vim'
+Plug 'bling/vim-airline'
+Plug 'liuchengxu/space-vim-dark'
+Plug 'Marfisc/vorange'
+Plug 'mattn/emmet-vim'
+Plug 'neomake/neomake'
+Plug 'reedes/vim-colors-pencil'
+Plug 'scrooloose/nerdcommenter'
+Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'tomasr/molokai'
+Plug 'tpope/vim-surround'
+Plug 'vimwiki/vimwiki'
+Plug 'whatyouhide/vim-gotham'
+Plug 'zeis/vim-kolor'
 
-call neobundle#end()
+call plug#end()
 
-NeoBundleCheck              " Installation check
+"NeoBundle 'davidhalter/jedi-vim'
+"NeoBundle 'junegunn/vim-easy-align'
+"NeoBundle 'scrooloose/syntastic'
+
+"NeoBundle 'Shougo/unite.vim'
+"NeoBundle 'skywind3000/asyncrun.vim'
+"NeoBundle 'vim-scripts/taglist.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Display settings
@@ -66,7 +62,7 @@ set guioptions-=L           " hide left hand scroll bar
 
 if has("gui_running")
     if has("win32") || has("win16")
-        set gfn=Consolas:h9:cANSI
+        set gfn=Consolas:h10:cANSI
     endif
 
     colorscheme space-vim-dark
@@ -120,20 +116,25 @@ smap <C-k>      <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>      <Plug>(neosnippet_expand_or_jump)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Neosnippet settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd! BufWritePost * Neomake
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Unite settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <leader>uf :<C-u>Unite file<CR>
-nnoremap <leader>un :<C-u>Unite file file/new<CR>
-nnoremap <leader>ub :<C-u>Unite buffer<CR>
-nnoremap <leader>ur :<C-u>Unite file_rec<CR>
+"call unite#filters#matcher_default#use(['matcher_fuzzy'])
+"nnoremap <leader>uf :<C-u>Unite file<CR>
+"nnoremap <leader>un :<C-u>Unite file file/new<CR>
+"nnoremap <leader>ub :<C-u>Unite buffer<CR>
+"nnoremap <leader>ur :<C-u>Unite file_rec<CR>
 
-" Custom mappings for the unite buffer
-function! s:unite_settings()
-    nmap <buffer> <Esc> <Plug>(unite_exit)
-endfunction
+"" Custom mappings for the unite buffer
+"function! s:unite_settings()
+    "nmap <buffer> <Esc> <Plug>(unite_exit)
+"endfunction
 
-autocmd FileType unite call s:unite_settings()
+"autocmd FileType unite call s:unite_settings()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Jedi-vim settings
