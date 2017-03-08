@@ -30,6 +30,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'skywind3000/asyncrun.vim'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
@@ -43,7 +44,6 @@ call plug#end()
 "NeoBundle 'scrooloose/syntastic'
 
 "NeoBundle 'Shougo/unite.vim'
-"NeoBundle 'skywind3000/asyncrun.vim'
 "NeoBundle 'vim-scripts/taglist.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
