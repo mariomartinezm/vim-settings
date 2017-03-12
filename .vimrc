@@ -1,12 +1,4 @@
-if has('vim_starting')
-    set nocompatible
-
-    if has("win32") || has("win16")
-        source $VIMRUNTIME/vimrc_example.vim
-        source $VIMRUNTIME/mswin.vim
-        behave mswin
-    endif
-endif
+set nocompatible            " Forget about Vi
 
 " Specify a directory for plugins
 if has("win32") || has("win16")
