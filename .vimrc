@@ -28,6 +28,7 @@ Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
 Plug 'whatyouhide/vim-gotham'
 Plug 'zeis/vim-kolor'
+Plug 'zcodes/vim-colors-basic'
 
 call plug#end()
 
