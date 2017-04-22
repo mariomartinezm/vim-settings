@@ -59,8 +59,6 @@ if has("gui_running")
         set gfn=Consolas:h10:cANSI
     endif
 
-    colorscheme space-vim-dark
-else
     colorscheme vorange
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
