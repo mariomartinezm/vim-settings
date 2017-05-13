@@ -13,6 +13,7 @@ endif
 Plug 'altercation/vim-colors-solarized'
 Plug 'beyondmarc/glsl.vim'
 Plug 'bling/vim-airline'
+Plug 'davidhalter/jedi-vim'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'Marfisc/vorange'
 Plug 'mattn/emmet-vim'
@@ -33,7 +34,6 @@ Plug 'zcodes/vim-colors-basic'
 
 call plug#end()
 
-"NeoBundle 'davidhalter/jedi-vim'
 "NeoBundle 'junegunn/vim-easy-align'
 "NeoBundle 'scrooloose/syntastic'
 
@@ -59,7 +59,7 @@ if has("gui_running")
         set gfn=Consolas:h10:cANSI
     endif
 
-    colorscheme vorange
+    colorscheme space-vim-dark
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor settings
