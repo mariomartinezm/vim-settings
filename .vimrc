@@ -64,7 +64,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-cd  %:p:h                   " Change to directory of current file
+set backspace=indent,eol,start " sane backspace defaults
 set encoding=utf-8          " set utf-8 as default encoding
 set noundofile              " do not create undo files
 set nowrap                  " don't wrap lines
