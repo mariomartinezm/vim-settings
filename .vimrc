@@ -15,6 +15,7 @@ Plug 'beyondmarc/glsl.vim'
 Plug 'bling/vim-airline'
 Plug 'davidhalter/jedi-vim'
 Plug 'liuchengxu/space-vim-dark'
+Plug 'majutsushi/tagbar'
 Plug 'Marfisc/vorange'
 Plug 'mattn/emmet-vim'
 Plug 'neomake/neomake'
@@ -85,10 +86,10 @@ set splitright              " Open vertical splits to the right
 " => Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 imap jj <Esc>
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+map <C-j> <c-w>j
+map <C-k> <c-w>k
+map <C-l> <c-w>l
+map <C-h> <c-w>h
 map <Leader>y "+y
 map <Leader>p "+p
 nnoremap <Leader>cw :cd %:p:h<CR>:pwd<CR>
@@ -108,7 +109,7 @@ smap <C-k>      <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>      <Plug>(neosnippet_expand_or_jump)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Neosnippet settings
+" => Neomake settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd! BufWritePost * Neomake
 
@@ -159,3 +160,7 @@ else
                 \{'path': '~/Dropbox/TODO/personal.wiki'}
                 \]
 endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tagbar settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>tb :TagbarToggle<CR>
