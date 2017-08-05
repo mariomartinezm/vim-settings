@@ -61,6 +61,7 @@ if has("gui_running")
     endif
 
     colorscheme space-vim-dark
+    let g:airline_theme='violet'
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor settings
