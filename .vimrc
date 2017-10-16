@@ -51,7 +51,6 @@ set showcmd                 " show typed command in status bar
 set ruler                   " show cursor position in status bar
 set title                   " show file title in title bar
 syntax on                   " Highlight syntax
-set colorcolumn=80          " show a margin at column 80
 set hlsearch                " highlight search results
 set guioptions-=L           " hide left hand scroll bar
 
