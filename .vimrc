@@ -29,6 +29,7 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
 Plug 'whatyouhide/vim-gotham'
 Plug 'zeis/vim-kolor'
@@ -64,8 +65,7 @@ if has("gui_running")
     set guioptions-=L       " hide left hand scroll bar
     set guioptions-=r       " hide right hand scroll bar
 
-    colorscheme space-vim-dark
-    let g:airline_theme='violet'
+    colorscheme base16-nord
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor settings
