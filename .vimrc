@@ -53,12 +53,16 @@ set ruler                   " show cursor position in status bar
 set title                   " show file title in title bar
 syntax on                   " Highlight syntax
 set hlsearch                " highlight search results
-set guioptions-=L           " hide left hand scroll bar
 
 if has("gui_running")
     if has("win32") || has("win16")
         set gfn=Consolas:h10:cANSI
     endif
+
+    set guioptions-=m       " hide menu bar
+    set guioptions-=T       " hide toolbar
+    set guioptions-=L       " hide left hand scroll bar
+    set guioptions-=r       " hide right hand scroll bar
 
     colorscheme space-vim-dark
     let g:airline_theme='violet'
