@@ -13,6 +13,7 @@ endif
 Plug 'altercation/vim-colors-solarized'
 Plug 'beyondmarc/glsl.vim'
 Plug 'bling/vim-airline'
+Plug 'chriskempson/base16-vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'majutsushi/tagbar'
