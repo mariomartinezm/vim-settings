@@ -10,7 +10,6 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Github repos
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'altercation/vim-colors-solarized'
 Plug 'beyondmarc/glsl.vim'
 Plug 'bling/vim-airline'
 Plug 'chriskempson/base16-vim'
@@ -21,19 +20,14 @@ Plug 'Marfisc/vorange'
 Plug 'mattn/emmet-vim'
 Plug 'neomake/neomake'
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'reedes/vim-colors-pencil'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'skywind3000/asyncrun.vim'
-Plug 'tomasr/molokai'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
 Plug 'whatyouhide/vim-gotham'
-Plug 'zeis/vim-kolor'
-Plug 'zcodes/vim-colors-basic'
 
 call plug#end()
 
