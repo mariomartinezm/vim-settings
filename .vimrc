@@ -31,12 +31,6 @@ Plug 'whatyouhide/vim-gotham'
 
 call plug#end()
 
-"NeoBundle 'junegunn/vim-easy-align'
-"NeoBundle 'scrooloose/syntastic'
-
-"NeoBundle 'Shougo/unite.vim'
-"NeoBundle 'vim-scripts/taglist.vim'
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Display settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
