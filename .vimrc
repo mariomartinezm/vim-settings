@@ -20,8 +20,10 @@ Plug 'Marfisc/vorange'
 Plug 'mattn/emmet-vim'
 Plug 'neomake/neomake'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-buffer.vim'
+Plug 'prabirshrestha/asyncomplete-neosnippet.vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'tpope/vim-surround'
@@ -53,7 +55,7 @@ if has("gui_running")
     set guioptions-=L       " hide left hand scroll bar
     set guioptions-=r       " hide right hand scroll bar
 
-    colorscheme base16-nord
+    colorscheme base16-seti
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor settings
@@ -90,9 +92,9 @@ nnoremap <Leader>cw :cd %:p:h<CR>:pwd<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Neocomplete settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Neosnippet settings
@@ -100,6 +102,19 @@ let g:neocomplete#enable_smart_case = 1
 imap <C-k>      <Plug>(neosnippet_expand_or_jump)
 smap <C-k>      <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>      <Plug>(neosnippet_expand_or_jump)
+
+call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+    \ 'name': 'buffer',
+    \ 'whitelist': ['*'],
+    \ 'blacklist': ['go'],
+    \ 'completor': function('asyncomplete#sources#buffer#completor'),
+    \ }))
+
+call asyncomplete#register_source(asyncomplete#sources#neosnippet#get_source_options({
+    \ 'name': 'neosnippet',
+    \ 'whitelist': ['*'],
+    \ 'completor': function('asyncomplete#sources#neosnippet#completor'),
+    \ }))
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Neomake settings
