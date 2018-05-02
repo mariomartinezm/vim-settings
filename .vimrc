@@ -22,6 +22,7 @@ Plug 'neomake/neomake'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-buffer.vim'
+Plug 'prabirshrestha/asyncomplete-file.vim'
 Plug 'prabirshrestha/asyncomplete-neosnippet.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/neosnippet'
@@ -90,14 +91,14 @@ map <Leader>p "+p
 nnoremap <Leader>cw :cd %:p:h<CR>:pwd<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Neocomplete settings
+" => Completion settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Neosnippet settings
+" => asyncomplete settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 imap <C-k>      <Plug>(neosnippet_expand_or_jump)
 smap <C-k>      <Plug>(neosnippet_expand_or_jump)
@@ -108,6 +109,13 @@ call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options
     \ 'whitelist': ['*'],
     \ 'blacklist': ['go'],
     \ 'completor': function('asyncomplete#sources#buffer#completor'),
+    \ }))
+
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
+    \ 'name': 'file',
+    \ 'whitelist': ['*'],
+    \ 'priority': 10,
+    \ 'completor': function('asyncomplete#sources#file#completor')
     \ }))
 
 call asyncomplete#register_source(asyncomplete#sources#neosnippet#get_source_options({
