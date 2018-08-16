@@ -18,7 +18,6 @@ Plug 'liuchengxu/space-vim-dark'
 Plug 'majutsushi/tagbar'
 Plug 'Marfisc/vorange'
 Plug 'mattn/emmet-vim'
-Plug 'neomake/neomake'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-buffer.vim'
@@ -31,6 +30,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
 Plug 'whatyouhide/vim-gotham'
+Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -125,25 +125,13 @@ call asyncomplete#register_source(asyncomplete#sources#neosnippet#get_source_opt
     \ }))
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Neomake settings
+" => ALE settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd! BufWritePost * Neomake
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Unite settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"call unite#filters#matcher_default#use(['matcher_fuzzy'])
-"nnoremap <leader>uf :<C-u>Unite file<CR>
-"nnoremap <leader>un :<C-u>Unite file file/new<CR>
-"nnoremap <leader>ub :<C-u>Unite buffer<CR>
-"nnoremap <leader>ur :<C-u>Unite file_rec<CR>
-
-"" Custom mappings for the unite buffer
-"function! s:unite_settings()
-    "nmap <buffer> <Esc> <Plug>(unite_exit)
-"endfunction
-
-"autocmd FileType unite call s:unite_settings()
+" Disable linters on while text is being edited
+let g:ale_lint_on_text_changed = 'never'
+" You can disable this option too
+" if you don't want linters to run on opening a file
+let g:ale_lint_on_enter = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Jedi-vim settings
