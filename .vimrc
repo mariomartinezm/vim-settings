@@ -13,11 +13,9 @@ endif
 Plug 'beyondmarc/glsl.vim'
 Plug 'bling/vim-airline'
 Plug 'chriskempson/base16-vim'
-Plug 'davidhalter/jedi-vim'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'majutsushi/tagbar'
 Plug 'Marfisc/vorange'
-Plug 'mattn/emmet-vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-buffer.vim'
@@ -26,7 +24,6 @@ Plug 'prabirshrestha/asyncomplete-neosnippet.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
 Plug 'whatyouhide/vim-gotham'
@@ -46,6 +43,17 @@ set title                   " show file title in title bar
 syntax on                   " Highlight syntax
 set hlsearch                " highlight search results
 
+if &term =~ '256color'
+    set t_ut=               " disable Background Color Erase (BCE) so
+                            " that color schemes render properly when
+                            " inside 256-color tmus and GNU screen
+endif
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"  " Set Vim-specific sequences for
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"  " RGB colors
+set t_Co=256                            " Enable 256 colors
+set termguicolors                       " true color support
+
 if has("gui_running")
     if has("win32") || has("win16")
         set gfn=Consolas:h10:cANSI
@@ -56,7 +64,9 @@ if has("gui_running")
     set guioptions-=L       " hide left hand scroll bar
     set guioptions-=r       " hide right hand scroll bar
 
-    colorscheme base16-seti
+    colorscheme base16-default-dark
+else
+    colorscheme base16-default-dark
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor settings
