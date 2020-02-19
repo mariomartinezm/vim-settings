@@ -11,23 +11,27 @@ endif
 " => Github repos
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'beyondmarc/glsl.vim'
-Plug 'bling/vim-airline'
 Plug 'chriskempson/base16-vim'
 Plug 'liuchengxu/space-vim-dark'
+Plug 'machakann/vim-sandwich'
 Plug 'majutsushi/tagbar'
 Plug 'Marfisc/vorange'
+Plug 'neomake/neomake'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-buffer.vim'
 Plug 'prabirshrestha/asyncomplete-file.vim'
 Plug 'prabirshrestha/asyncomplete-neosnippet.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
 Plug 'whatyouhide/vim-gotham'
-Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -64,9 +68,9 @@ if has("gui_running")
     set guioptions-=L       " hide left hand scroll bar
     set guioptions-=r       " hide right hand scroll bar
 
-    colorscheme base16-default-dark
+    colorscheme base16-dracula
 else
-    colorscheme base16-default-dark
+    colorscheme base16-dracula
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor settings
@@ -134,28 +138,38 @@ call asyncomplete#register_source(asyncomplete#sources#neosnippet#get_source_opt
     \ 'completor': function('asyncomplete#sources#neosnippet#completor'),
     \ }))
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => ALE settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Disable linters on while text is being edited
-let g:ale_lint_on_text_changed = 'never'
-" You can disable this option too
-" if you don't want linters to run on opening a file
-let g:ale_lint_on_enter = 0
+if executable('clangd')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'clangd',
+        \ 'cmd': {server_info->['clangd']},
+        \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+        \ })
+endif
+
+"if executable('pyls')
+    "" pip install python-language-server
+    "au User lsp_setup call lsp#register_server({
+        "\ 'name': 'pyls',
+        "\ 'cmd': {server_info->['pyls']},
+        "\ 'whitelist': ['python'],
+        "\ })
+"endif
+
+"let g:lsp_log_file = 'D:/lsp.log'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Jedi-vim settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType python setlocal omnifunc=jedi#completions
-let g:jedi#completions_enabled = 0
-let g:jedi#auto_vim_configuration = 0
-if !exists('g:neocomplete#force_omni_input_patterns')
-    let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_omni_input_patterns.python =
-\ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
-"let g:jedi#popup_select_first = 0
-let g:jedi#rename_command = "<leader>R"
+"autocmd FileType python setlocal omnifunc=jedi#completions
+"let g:jedi#completions_enabled = 0
+"let g:jedi#auto_vim_configuration = 0
+"if !exists('g:neocomplete#force_omni_input_patterns')
+    "let g:neocomplete#force_omni_input_patterns = {}
+"endif
+"let g:neocomplete#force_omni_input_patterns.python =
+"\ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
+""let g:jedi#popup_select_first = 0
+"let g:jedi#rename_command = "<leader>R"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-airline settings
@@ -174,7 +188,13 @@ else
                 \{'path': '~/Dropbox/TODO/personal.wiki'}
                 \]
 endif
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tagbar settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>tb :TagbarToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Neomake
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call neomake#configure#automake('w')
