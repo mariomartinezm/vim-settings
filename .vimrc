@@ -10,13 +10,16 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Github repos
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'arcticicestudio/nord-vim'
 Plug 'beyondmarc/glsl.vim'
 Plug 'chriskempson/base16-vim'
+Plug 'dracula/vim', {'as':'dracula'}
+Plug 'dense-analysis/ale'
 Plug 'liuchengxu/space-vim-dark'
+Plug 'mattn/emmet-vim'
 Plug 'machakann/vim-sandwich'
 Plug 'majutsushi/tagbar'
 Plug 'Marfisc/vorange'
-Plug 'neomake/neomake'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-buffer.vim'
@@ -25,9 +28,12 @@ Plug 'prabirshrestha/asyncomplete-neosnippet.vim'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'Omnisharp/omnisharp-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'tommcdo/vim-lion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
@@ -68,9 +74,9 @@ if has("gui_running")
     set guioptions-=L       " hide left hand scroll bar
     set guioptions-=r       " hide right hand scroll bar
 
-    colorscheme base16-dracula
+    colorscheme base16-oceanicnext
 else
-    colorscheme base16-dracula
+    colorscheme base16-oceanicnext
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor settings
@@ -158,23 +164,31 @@ endif
 "let g:lsp_log_file = 'D:/lsp.log'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Jedi-vim settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"autocmd FileType python setlocal omnifunc=jedi#completions
-"let g:jedi#completions_enabled = 0
-"let g:jedi#auto_vim_configuration = 0
-"if !exists('g:neocomplete#force_omni_input_patterns')
-    "let g:neocomplete#force_omni_input_patterns = {}
-"endif
-"let g:neocomplete#force_omni_input_patterns.python =
-"\ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
-""let g:jedi#popup_select_first = 0
-"let g:jedi#rename_command = "<leader>R"
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-airline settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ALE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_linters = {
+\ 'cs': ['OmniSharp'],
+\ 'cpp': ['gcc']
+\}
+
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
+
+" Change the symbols ALE uses
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '.'
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+
+" Run linteres only when saving a file
+" let g:ale_lint_on_text_changed = 'never'
+" let g:ale_lint_on_insert_leave = 0
+" let g:ale_lint_on_enter = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimwiki settings
@@ -195,6 +209,12 @@ endif
 nmap <leader>tb :TagbarToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Neomake
+" => Emmet
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call neomake#configure#automake('w')
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-lion
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let b:lion_squeeze_spaces = 1
