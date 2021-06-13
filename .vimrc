@@ -75,9 +75,9 @@ if has("gui_running")
     set guioptions-=L       " hide left hand scroll bar
     set guioptions-=r       " hide right hand scroll bar
 
-    colorscheme base16-oceanicnext
+    colorscheme dracula
 else
-    colorscheme base16-oceanicnext
+    colorscheme dracula
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor settings
