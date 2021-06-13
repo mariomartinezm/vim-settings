@@ -67,7 +67,7 @@ set termguicolors                       " true color support
 
 if has("gui_running")
     if has("win32") || has("win16")
-        set gfn=Consolas:h10:cANSI
+        set gfn=Cascadia\ Code\ PL:h10:cANSI
     endif
 
     set guioptions-=m       " hide menu bar
