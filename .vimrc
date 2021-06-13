@@ -111,6 +111,7 @@ map <C-h> <c-w>h
 map <Leader>y "+y
 map <Leader>p "+p
 nnoremap <Leader>cw :cd %:p:h<CR>:pwd<CR>
+map <Leader><Space> :nohlsearch<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Completion settings
