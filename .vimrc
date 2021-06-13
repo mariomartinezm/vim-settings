@@ -11,6 +11,7 @@ endif
 " => Github repos
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'arcticicestudio/nord-vim'
+Plug 'airblade/vim-gitgutter'
 Plug 'beyondmarc/glsl.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'dracula/vim', {'as':'dracula'}
@@ -220,3 +221,10 @@ autocmd FileType html,css EmmetInstall
 " => vim-lion
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let b:lion_squeeze_spaces = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => gitgutter
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set updatetime=250
+nmap <Leader>gn <Plug>(GitGutterNextHunk)
+nmap <Leader>gN <Plug>(GitGutterPrevHunk)
