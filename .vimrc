@@ -175,7 +175,7 @@ let g:airline_powerline_fonts = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
 \ 'cs': ['OmniSharp'],
-\ 'cpp': ['gcc']
+\ 'cpp': ['clangd']
 \}
 
 " Set this. Airline will handle the rest.
