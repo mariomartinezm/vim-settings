@@ -197,11 +197,11 @@ highlight clear ALEWarningSign
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("win32") || has("win16")
     let g:vimwiki_list = [
-                \{'path': 'D:/Dropbox/TODO/personal.wiki'}
+                \{'path': 'D:/Dropbox/Vimwiki'}
                 \]
 else
     let g:vimwiki_list = [
-                \{'path': '~/Dropbox/TODO/personal.wiki'}
+                \{'path': '~/Dropbox/Vimwiki'}
                 \]
 endif
 
