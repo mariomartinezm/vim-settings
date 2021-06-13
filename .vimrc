@@ -52,6 +52,7 @@ set ruler                   " show cursor position in status bar
 set title                   " show file title in title bar
 syntax on                   " Highlight syntax
 set hlsearch                " highlight search results
+set belloff=all             " Disable bell sounds
 
 if &term =~ '256color'
     set t_ut=               " disable Background Color Erase (BCE) so
