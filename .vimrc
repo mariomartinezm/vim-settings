@@ -11,7 +11,6 @@ endif
 " => Github repos
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'arcticicestudio/nord-vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'base16-project/base16-vim'
 Plug 'beyondmarc/glsl.vim'
 Plug 'dracula/vim', {'as':'dracula'}
