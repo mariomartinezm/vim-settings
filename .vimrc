@@ -156,14 +156,14 @@ if executable('clangd')
         \ })
 endif
 
-"if executable('pyls')
+if executable('pyls')
     "" pip install python-language-server
-    "au User lsp_setup call lsp#register_server({
-        "\ 'name': 'pyls',
-        "\ 'cmd': {server_info->['pyls']},
-        "\ 'whitelist': ['python'],
-        "\ })
-"endif
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
 
 "let g:lsp_log_file = 'D:/lsp.log'
 
