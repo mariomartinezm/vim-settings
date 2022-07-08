@@ -12,8 +12,8 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'arcticicestudio/nord-vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'base16-project/base16-vim'
 Plug 'beyondmarc/glsl.vim'
-Plug 'chriskempson/base16-vim'
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'dense-analysis/ale'
 Plug 'liuchengxu/space-vim-dark'
