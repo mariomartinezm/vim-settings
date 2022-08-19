@@ -222,10 +222,3 @@ autocmd FileType html,css EmmetInstall
 " => vim-lion
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let b:lion_squeeze_spaces = 1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => gitgutter
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set updatetime=250
-nmap <Leader>gn <Plug>(GitGutterNextHunk)
-nmap <Leader>gN <Plug>(GitGutterPrevHunk)
