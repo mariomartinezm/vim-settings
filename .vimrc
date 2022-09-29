@@ -13,8 +13,9 @@ endif
 Plug 'arcticicestudio/nord-vim'
 Plug 'base16-project/base16-vim'
 Plug 'beyondmarc/glsl.vim'
-Plug 'dracula/vim', {'as':'dracula'}
 Plug 'dense-analysis/ale'
+Plug 'dracula/vim', {'as':'dracula'}
+Plug 'ghifarit53/tokyonight-vim'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'mattn/emmet-vim'
 Plug 'machakann/vim-sandwich'
@@ -75,11 +76,15 @@ if has("gui_running")
     set guioptions-=T       " hide toolbar
     set guioptions-=L       " hide left hand scroll bar
     set guioptions-=r       " hide right hand scroll bar
-
-    colorscheme dracula
-else
-    colorscheme dracula
 endif
+
+colorscheme tokyonight
+let g:tokyonight_style = "night"    " available, night, storm
+let g:tokyonight_enable_italic = 1
+let g:tokyonight_disable_italic_comment = 1
+let g:airline_theme = "tokyonight"
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -206,6 +211,13 @@ else
                 \{'path': '~/Dropbox/Vimwiki'}
                 \]
 endif
+
+:hi VimwikiHeader1 guifg=#F7768E
+:hi VimwikiHeader2 guifg=#E0AF68
+:hi VimwikiHeader3 guifg=#9ECE6A
+:hi VimwikiHeader4 guifg=#73DACA
+:hi VimwikiHeader5 guifg=#B4F9F8
+:hi VimwikiHeader6 guifg=#7AA2F7
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tagbar settings
