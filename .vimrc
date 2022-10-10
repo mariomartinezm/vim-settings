@@ -104,6 +104,7 @@ filetype plugin indent on   " enable plugins
 
 set splitbelow              " Open horizontal splits below
 set splitright              " Open vertical splits to the right
+set sessionoptions=curdir,buffers,tabpages
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
@@ -189,8 +190,8 @@ let g:ale_linters = {
 let g:airline#extensions#ale#enabled = 1
 
 " Change the symbols ALE uses
-let g:ale_sign_error = '●'
-let g:ale_sign_warning = '.'
+let g:ale_sign_error = 'X'
+let g:ale_sign_warning = '!'
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 
