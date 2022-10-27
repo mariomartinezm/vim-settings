@@ -76,6 +76,7 @@ if has("gui_running")
     set guioptions-=T       " hide toolbar
     set guioptions-=L       " hide left hand scroll bar
     set guioptions-=r       " hide right hand scroll bar
+    set guioptions-=e       " disable gui tabs
 endif
 
 colorscheme tokyonight
@@ -114,10 +115,16 @@ map <C-j> <c-w>j
 map <C-k> <c-w>k
 map <C-l> <c-w>l
 map <C-h> <c-w>h
+
+" Leader key mappings
 map <Leader>y "+y
 map <Leader>p "+p
 nnoremap <Leader>cw :cd %:p:h<CR>:pwd<CR>
 map <Leader><Space> :nohlsearch<CR>
+
+" Function key mappings
+map <F4> :Explore<CR>
+map <F5> :make!<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Completion settings
