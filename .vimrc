@@ -203,7 +203,7 @@ let g:ale_sign_warning = '!'
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 
-" Run linteres only when saving a file
+" Run linters only when saving a file
 " let g:ale_lint_on_text_changed = 'never'
 " let g:ale_lint_on_insert_leave = 0
 " let g:ale_lint_on_enter = 0
