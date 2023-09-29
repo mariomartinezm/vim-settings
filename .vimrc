@@ -14,6 +14,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'base16-project/base16-vim'
 Plug 'beyondmarc/glsl.vim'
 Plug 'dense-analysis/ale'
+Plug 'Dimercel/todo-vim'
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'logico/typewriter-vim'
@@ -243,3 +244,11 @@ autocmd FileType html,css EmmetInstall
 " => vim-lion
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let b:lion_squeeze_spaces = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => todo-vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>td :TODOOpen<CR>
+let g:todo_vertical = 1
+let g:todo_right = 1
+let g:todo_winwidth = 40
