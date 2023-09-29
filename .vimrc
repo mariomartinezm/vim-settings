@@ -19,7 +19,7 @@ Plug 'ghifarit53/tokyonight-vim'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'mattn/emmet-vim'
 Plug 'machakann/vim-sandwich'
-Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'Marfisc/vorange'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'prabirshrestha/asyncomplete.vim'
