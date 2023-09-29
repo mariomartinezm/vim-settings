@@ -16,6 +16,7 @@ Plug 'beyondmarc/glsl.vim'
 Plug 'dense-analysis/ale'
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'ghifarit53/tokyonight-vim'
+Plug 'logico/typewriter-vim'
 Plug 'mattn/emmet-vim'
 Plug 'machakann/vim-sandwich'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
