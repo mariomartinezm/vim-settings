@@ -1,10 +1,14 @@
 set nocompatible            " Forget about Vi
 
-" Specify a directory for plugins
 if has("win32") || has("win16")
+    " Specify a directory for plugins
     call plug#begin('~/vimfiles/plugged')
+
+    " Specify a directory for user snippets
+    let g:neosnippet#snippets_directory = "~/vimfiles/mysnippets"
 else
     call plug#begin('~/.vim/plugged')
+    let g:neosnippet#snippets_directory = "~/.vim/mysnippets"
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
