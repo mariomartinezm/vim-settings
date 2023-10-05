@@ -4,3 +4,16 @@ options     head
     \`\`\`{r}
     ${1}
     \`\`\`
+
+snippet     header
+options     head, indent
+	---
+	title: ${1}
+	autnor: ${2}
+    output:
+		html_document:
+			theme: ${3:united}
+			highlight: ${4:zenburn}
+			df_print: ${5:paged}
+	---
+    ${5}
