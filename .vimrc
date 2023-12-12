@@ -22,7 +22,6 @@ Plug 'Dimercel/todo-vim'
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'logico/typewriter-vim'
-Plug 'lifepillar/vim-wwdc17-theme'
 Plug 'mattn/emmet-vim'
 Plug 'machakann/vim-sandwich'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
@@ -41,6 +40,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'Omnisharp/omnisharp-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/neosnippet'
+Plug 'sonph/onehalf', { 'rtp': 'vim/' }
 Plug 'Shougo/neosnippet-snippets'
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-fugitive'
