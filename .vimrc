@@ -131,6 +131,7 @@ nnoremap <Leader>cw :cd %:p:h<CR>:pwd<CR>
 map <Leader><Space> :nohlsearch<CR>
 
 " Function key mappings
+nnoremap <F2> :let @+=expand("%:p")<CR>
 map <F4> :Explore<CR>
 map <F5> :make!<CR>
 
