@@ -4,6 +4,12 @@ options     head
     ${1}
     \`\`\`
 
+snippet     cellfig
+options     head
+    \`\`\`{r fig.align=${1:"center"}, fig.width=${2:7}, fig.height=${3:7}}
+    ${4}
+    \`\`\`
+
 snippet     header
 options     head, indent
 	---
