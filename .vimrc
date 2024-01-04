@@ -14,7 +14,6 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Github repos
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'arcticicestudio/nord-vim'
 Plug 'base16-project/base16-vim'
 Plug 'beyondmarc/glsl.vim'
 Plug 'dense-analysis/ale'
@@ -26,7 +25,7 @@ Plug 'mattn/emmet-vim'
 Plug 'machakann/vim-sandwich'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'Marfisc/vorange'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'nordtheme/vim', {'as':'nord'}
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-buffer.vim'
