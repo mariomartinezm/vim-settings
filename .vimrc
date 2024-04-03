@@ -20,6 +20,8 @@ Plug 'dense-analysis/ale'
 Plug 'Dimercel/todo-vim'
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'ghifarit53/tokyonight-vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'logico/typewriter-vim'
 Plug 'mattn/emmet-vim'
 Plug 'machakann/vim-sandwich'
