@@ -22,6 +22,7 @@ Plug 'dracula/vim', {'as':'dracula'}
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'ledger/vim-ledger'
 Plug 'logico/typewriter-vim'
 Plug 'mattn/emmet-vim'
 Plug 'machakann/vim-sandwich'
