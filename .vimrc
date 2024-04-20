@@ -18,10 +18,9 @@ Plug 'base16-project/base16-vim'
 Plug 'beyondmarc/glsl.vim'
 Plug 'dense-analysis/ale'
 Plug 'Dimercel/todo-vim'
+Plug 'Donaldttt/fuzzyy'
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'ghifarit53/tokyonight-vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'ledger/vim-ledger'
 Plug 'logico/typewriter-vim'
 Plug 'mattn/emmet-vim'
