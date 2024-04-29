@@ -39,6 +39,7 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'Omnisharp/omnisharp-vim'
+Plug 'sainnhe/edge'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/neosnippet'
 Plug 'sonph/onehalf', { 'rtp': 'vim/' }
