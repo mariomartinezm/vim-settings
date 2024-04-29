@@ -1,0 +1,20 @@
+snippet		uber
+options		head
+	`strftime("%Y-%m-%d")` * Uber ${1} -> ${2}
+		Expenses:Transportation  \$${3}
+		Liabilities:CreditCards:Banamex
+	${4}
+
+snippet		nomina
+options		head
+	`strftime("%Y-%m-%d")` * Nomina ${1}QNA ${2}
+		Assets:Cash:Banks:Banamex:Cash  \$${3}
+		Income:AgileThought:Salary
+	${4}
+
+snippet		ccbanamex
+options		head
+	`strftime("%Y-%m-%d")` * ${1}
+		Expenses:${2}  \$${3}
+		Liabilities:CreditCards:Banamex
+	${4}
