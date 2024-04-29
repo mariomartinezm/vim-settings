@@ -46,6 +46,7 @@ Plug 'tommcdo/vim-lion'
 Plug 'uiiaoo/java-syntax.vim', { 'for': 'java' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'vimwiki/vimwiki'
 Plug 'whatyouhide/vim-gotham'
 
