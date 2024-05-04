@@ -5,6 +5,13 @@ options		head
 		Liabilities:CreditCards:Banamex
 	${4}
 
+snippet		taxi
+options		head
+	`strftime("%Y-%m-%d")` * Taxi ${1} -> ${2}
+		Expenses:Transportation  \$${3}
+		Assets:Cash:Wallet
+	${4}
+
 snippet		nomina
 options		head
 	`strftime("%Y-%m-%d")` * Nomina ${1}QNA ${2}
@@ -17,4 +24,11 @@ options		head
 	`strftime("%Y-%m-%d")` * ${1}
 		Expenses:${2}  \$${3}
 		Liabilities:CreditCards:Banamex
+	${4}
+
+snippet		wallet
+options		head
+	`strftime("%Y-%m-%d")` * ${1}
+		Expenses:${2}  \$${3}
+		Assets:Cash:Wallet
 	${4}
