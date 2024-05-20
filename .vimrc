@@ -41,8 +41,8 @@ Plug 'Omnisharp/omnisharp-vim'
 Plug 'sainnhe/edge'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/neosnippet'
-Plug 'sonph/onehalf', { 'rtp': 'vim/' }
 Plug 'Shougo/neosnippet-snippets'
+Plug 'sonph/onehalf', { 'rtp': 'vim/' }
 Plug 'tommcdo/vim-lion'
 Plug 'uiiaoo/java-syntax.vim', { 'for': 'java' }
 Plug 'vim-airline/vim-airline'
