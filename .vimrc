@@ -16,7 +16,6 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'base16-project/base16-vim'
 Plug 'beyondmarc/glsl.vim'
-Plug 'dense-analysis/ale'
 Plug 'Dimercel/todo-vim'
 Plug 'Donaldttt/fuzzyy'
 Plug 'dracula/vim', {'as':'dracula'}
@@ -195,29 +194,7 @@ endif
 " => Vim-airline settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
-let g:airline_powerline_fonts = 1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => ALE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ale_linters = {
-\ 'cs': ['OmniSharp'],
-\ 'cpp': ['clangd']
-\}
-
-" Set this. Airline will handle the rest.
-let g:airline#extensions#ale#enabled = 1
-
-" Change the symbols ALE uses
-let g:ale_sign_error = 'X'
-let g:ale_sign_warning = '!'
-highlight clear ALEErrorSign
-highlight clear ALEWarningSign
-
-" Run linters only when saving a file
-" let g:ale_lint_on_text_changed = 'never'
-" let g:ale_lint_on_insert_leave = 0
-" let g:ale_lint_on_enter = 0
+" let g:airline_powerline_fonts = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimwiki settings
