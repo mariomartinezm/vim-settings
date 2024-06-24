@@ -191,13 +191,17 @@ set laststatus=2
 " => Vimwiki settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("win32") || has("win16")
-    let g:vimwiki_list = [
-                \{'path': 'D:/Documents/Vimwiki'}
-                \]
+    let g:vimwiki_list = [{
+                \ 'path': 'D:/Documents/Vimwiki',
+                \ 'syntax': 'markdown',
+                \ 'ext': '.md'
+                \}]
 else
-    let g:vimwiki_list = [
-                \{'path': '~/Documents/Vimwiki'}
-                \]
+    let g:vimwiki_list = [{
+                \ 'path': '~/Documents/Vimwiki',
+                \ 'syntax': 'markdown',
+                \ 'ext': '.md'
+                \}]
 endif
 
 :hi VimwikiHeader1 guifg=#F7768E
