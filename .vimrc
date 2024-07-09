@@ -179,6 +179,9 @@ if executable('clangd')
         \ })
 endif
 
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_diagnostics_echo_delay = 100
+let g:lsp_diagnostics_virtual_text_enabled = 0
 "let g:lsp_log_file = 'D:/lsp.log'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
