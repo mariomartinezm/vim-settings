@@ -188,7 +188,7 @@ let g:lsp_diagnostics_virtual_text_enabled = 0
 " => Vim-airline settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimwiki settings
