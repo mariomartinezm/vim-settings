@@ -89,12 +89,10 @@ if has("gui_running")
     set guioptions-=e       " disable gui tabs
 endif
 
-colorscheme tokyonight
-let g:tokyonight_style = "night"    " available, night, storm
-let g:tokyonight_enable_italic = 1
-let g:tokyonight_disable_italic_comment = 1
-let g:airline_theme = "tokyonight"
-
+let g:airline_theme = "edge"
+let g:edge_style = "aura"
+let g:edge_better_performance = 1
+colorscheme edge
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor settings
