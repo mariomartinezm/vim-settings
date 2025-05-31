@@ -78,9 +78,7 @@ set t_Co=256                            " Enable 256 colors
 set termguicolors                       " true color support
 
 if has("gui_running")
-    if has("win32") || has("win16")
-        set gfn=Cascadia\ Code\ PL:h10:cANSI
-    endif
+    set gfn=Maple\ Mono\ 13
 
     set guioptions-=m       " hide menu bar
     set guioptions-=T       " hide toolbar
