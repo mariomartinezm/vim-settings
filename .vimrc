@@ -203,13 +203,6 @@ else
                 \}]
 endif
 
-:hi VimwikiHeader1 guifg=#F7768E
-:hi VimwikiHeader2 guifg=#E0AF68
-:hi VimwikiHeader3 guifg=#9ECE6A
-:hi VimwikiHeader4 guifg=#73DACA
-:hi VimwikiHeader5 guifg=#B4F9F8
-:hi VimwikiHeader6 guifg=#7AA2F7
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tagbar settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
