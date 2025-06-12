@@ -117,10 +117,10 @@ set sessionoptions=curdir,buffers,tabpages
 " => Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 imap jj <Esc>
-map <C-j> <c-w>j
-map <C-k> <c-w>k
-map <C-l> <c-w>l
-map <C-h> <c-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+map <C-h> <C-w>h
 
 " Leader key mappings
 map <Leader>y "+y
