@@ -44,6 +44,7 @@ Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'sonph/onehalf', { 'rtp': 'vim/' }
 Plug 'tommcdo/vim-lion'
+Plug 'tpope/vim-fugitive'
 Plug 'uiiaoo/java-syntax.vim', { 'for': 'java' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
