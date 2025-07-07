@@ -26,6 +26,7 @@ Plug 'mattn/emmet-vim'
 Plug 'machakann/vim-sandwich'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'nordtheme/vim', {'as':'nord'}
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-buffer.vim'
