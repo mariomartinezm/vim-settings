@@ -25,7 +25,6 @@ Plug 'logico/typewriter-vim'
 Plug 'mattn/emmet-vim'
 Plug 'machakann/vim-sandwich'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
-Plug 'Marfisc/vorange'
 Plug 'nordtheme/vim', {'as':'nord'}
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -49,7 +48,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'vimwiki/vimwiki'
-Plug 'whatyouhide/vim-gotham'
 
 call plug#end()
 
