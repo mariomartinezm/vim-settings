@@ -87,6 +87,7 @@ if has("gui_running")
     set guioptions-=e       " disable gui tabs
 endif
 
+set background=dark
 let g:airline_theme = "edge"
 let g:edge_style = "aura"
 let g:edge_better_performance = 1
