@@ -132,6 +132,12 @@ nnoremap <F2> :let @+=expand("%:p")<CR>
 map <F4> :Explore<CR>
 map <F5> :make!<CR>
 
+" LSP mappings
+map <Leader>df :LspDocumentFormat<CR>
+map <Leader>rf :LspDocumentRangeFormat<CR>
+map <Leader>ac :LspCodeAction<CR>
+map <Leader>re :LspRename<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Completion settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
